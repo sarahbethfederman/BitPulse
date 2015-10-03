@@ -13,7 +13,7 @@ Session = Astro.Class({
         },
         'exercises.$.name': 'string',
         'excercises.$.duration': 'number',
-        'exercises.$.heartrate'
+        'exercises.$.heartrate': 'number'
     },
     events: {
 
