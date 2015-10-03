@@ -21,4 +21,8 @@ insecure                # Allow all DB writes from clients (for prototyping)
 jagi:astronomy
 accounts-ui
 accounts-password
+<<<<<<< HEAD
 d3js:d3
+=======
+fourseven:scss
+>>>>>>> ad4b9944912670b2c7aaf9df5423efe419a3af56
