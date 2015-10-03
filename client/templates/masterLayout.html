@@ -3,7 +3,12 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-{{> sessions}}
+  <div class="container">
+    {{> masterLayout }}
+  </div>
 </body>
+
+
+<template name="masterLayout">
+  {{>Template.dynamic template=content}}
+</template>

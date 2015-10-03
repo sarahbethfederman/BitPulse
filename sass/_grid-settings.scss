@@ -1,0 +1,7 @@
+@import "neat/neat-helpers";
+
+// Change the grid settings
+$grid-columns: 6;
+
+$tablet: new-breakpoint(min-width 768px 8);
+$desktop: new-breakpoint(min-width 1440px 12);

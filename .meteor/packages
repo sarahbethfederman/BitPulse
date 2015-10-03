@@ -20,9 +20,13 @@ jagi:astronomy
 accounts-ui
 accounts-password
 d3js:d3
-fourseven:scss
 kadira:flow-router
 selaias:accounts-fitbit
-wolves:bourbon
 service-configuration
+<<<<<<< HEAD
 reywood:publish-composite
+=======
+kadira:blaze-layout
+wolves:bourbon
+wolves:neat
+>>>>>>> 5a45c899e6a8d751f05aed51dbf65766187457fb
