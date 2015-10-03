@@ -1,4 +1,5 @@
 accounts-base@1.2.1
+accounts-oauth@1.1.7
 accounts-password@1.1.3
 accounts-ui@1.1.6
 accounts-ui-unstyled@1.1.8
@@ -58,6 +59,8 @@ mongo@1.1.2
 mongo-id@1.0.1
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
+oauth@1.1.6
+oauth1@1.1.5
 observe-sequence@1.0.7
 ordered-dict@1.0.4
 promise@0.5.0
@@ -68,6 +71,8 @@ reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
+selaias:accounts-fitbit@0.2.0
+selaias:fitbit@0.2.0
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
