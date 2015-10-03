@@ -3,5 +3,10 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  {{> masterLayout }}
 </body>
+
+
+<template name="masterLayout">
+  {{>Template.dynamic template=content}}
+</template>
