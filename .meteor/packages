@@ -20,8 +20,9 @@ jagi:astronomy
 accounts-ui
 accounts-password
 d3js:d3
-fourseven:scss
 kadira:flow-router
 selaias:accounts-fitbit
-wolves:bourbon
 service-configuration
+kadira:blaze-layout
+wolves:bourbon
+wolves:neat
