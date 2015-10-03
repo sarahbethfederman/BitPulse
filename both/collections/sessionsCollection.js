@@ -5,7 +5,15 @@ Session = Astro.Class({
     collection: Sessions,
     fields: {
         workout: 'string',
-
+        exercises: {
+            type: 'object',
+            default: function(){
+                return {};
+            }
+        },
+        'exercises.$.name': 'string',
+        'excercises.$.duration': 'number',
+        'exercises.$.heartrate'
     },
     events: {
 

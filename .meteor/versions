@@ -70,6 +70,7 @@ reactive-dict@1.1.2
 reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
+reywood:publish-composite@1.4.2
 routepolicy@1.0.6
 selaias:accounts-fitbit@0.2.0
 selaias:fitbit@0.2.0
