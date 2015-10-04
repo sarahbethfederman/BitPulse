@@ -29,6 +29,6 @@ FlowRouter.route('/sessions', {
 FlowRouter.route('/sessions/:sessionId', {
     name: 'SingleSession',
     action: function () {
-        BlazeLayout.render('masterLayout', {content: 'session'});
+        BlazeLayout.render('masterLayout', {content: 'summary'});
     }
 });
