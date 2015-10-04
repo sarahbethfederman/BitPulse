@@ -1,15 +1,24 @@
 <head>
   <title>BitPulse</title>
   <script src="https://use.typekit.net/yac3udt.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
 </head>
 
 <body>
 </body>
 
 <template name="masterLayout">
-  {{> mainMenu }}
   <div class="container">
+    {{#if currentUser}} {{> mainMenu }}
     {{>Template.dynamic template=content}}
+    {{else}}
+    {{> atForm}}
+    {{/if}}
   </div>
 </template>
