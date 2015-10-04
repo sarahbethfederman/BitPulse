@@ -20,7 +20,7 @@ Meteor.startup(function(){
       var exercises = [];
       _.each(_.range(10), function(i) {
         var exName = faker.name.findName();
-        var exDur = faker.random.number({'min': 30,'max': 250});
+        var exDur = faker.random.number({'min': 5,'max': 15});
         exercises[i] = {
           _id: new Meteor.Collection.ObjectID()._str,
           name: exName,

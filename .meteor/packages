@@ -25,8 +25,8 @@ selaias:accounts-fitbit
 service-configuration
 reywood:publish-composite
 kadira:blaze-layout
-wolves:bourbon
-wolves:neat
 fourseven:scss
 arillo:flow-router-helpers
 digilord:faker
+wolves:bourbon
+wolves:neat

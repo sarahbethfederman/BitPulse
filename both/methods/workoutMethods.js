@@ -7,22 +7,19 @@ Meteor.methods({
     Meteor.call('saveDoc', workout);
   },
   reorderExercises: function(workout, exercise) {
-    var sortFrom = exercise.order;
+    // var sortFrom = exercise.order;
     var maxOrder = _.max(workout.exercises, function(exercise) {
       return exercise.order;
     }).order;
     var newExercise = [];
-    workout.exercises.forEach(function(exercise, i) {
+    workout.exercises.forEach(function(child, i) {
       newExercise[i] = workout.exercises[i];
-      // console.log(sortFrom, maxOrder, exercise.order, newExercise[i]);
-      if (exercise.order < sortFrom) {
-        //for exercises before the selected exercise, push them to the end
-        newExercise[i].order = exercise.order + (maxOrder - sortFrom) + 1;
-      } else {
-        //for fragments after the selected fragment, make them next
-        newExercise[i].order = exercise.order - sortFrom;
-      }
+      newExercise[i].order = workout.exercises[i].order - 1;
     });
+    // console.log(maxOrder, newExercise);
+    var next = _.chain(newExercise).pluck("order").indexOf(-1).value();
+    // console.log(next);
+    newExercise[next].order = maxOrder;
     workout.set('exercises', newExercise);
     Meteor.call('saveDocs', workout);
   }
