@@ -18,6 +18,25 @@ body {
   }
 }
 
+input {
+  outline: 0;
+  &[type='text'],&[type='number'] {
+    border: none;
+    padding: rem(5);
+    padding-left: rem(15);
+  }
+}
+
+textarea {
+  border: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid darken($light-grey,10);
+  margin: rem(15) 0;
+}
+
 h1 {
   margin: rem(5) 0;
   font-size: rem(22);
