@@ -5,7 +5,7 @@ FlowRouter.route('/', {
     }
 });
 
-FlowRouter.route('/workouts/:workoutId',{
+FlowRouter.route('/workouts/:workoutId/:sessionId?',{
     name: 'Exercises',
     action: function(){
         BlazeLayout.render('masterLayout', {content: 'exercise'});

@@ -28,6 +28,9 @@ Workout = Astro.Class({
       return Meteor.users.find({
         _id: this.owner
       });
+    },
+    duration: function(){
+      return _.reduce(_.pluck(this.exercises, 'duration'), function(memo, num){ return memo + num; }, 0);
     }
   }
 });
