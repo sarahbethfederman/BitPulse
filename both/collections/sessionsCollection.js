@@ -5,15 +5,15 @@ Sess = Astro.Class({
     collection: Sess,
     fields: {
         workout: 'string',
-        exercises: {
-            type: 'object',
-            default: function(){
-                return {};
-            }
-        },
-        'exercises.$.name': 'string',
-        'excercises.$.duration': 'number',
-        'exercises.$.heartrate': 'number'
+        // exercises: {
+        //     type: 'array',
+        //     default: function(){
+        //         return [];
+        //     }
+        // },
+        'exercises.$.ex_id': 'string',
+        'exercises.$.data.$.hr': 'number',
+        'exercises.$.data.$.timeStamp': 'date'
     },
     events: {
 
