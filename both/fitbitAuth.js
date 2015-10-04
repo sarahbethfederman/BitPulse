@@ -1,6 +1,6 @@
-ServiceConfiguration.configurations.remove({
-    service: "fitbit"
-});
+// ServiceConfiguration.configurations.remove({
+//     service: "fitbit"
+// });
 
 ServiceConfiguration.configurations.upsert(
     { service: "fitbit" },
