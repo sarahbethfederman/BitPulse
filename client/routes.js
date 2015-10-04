@@ -32,3 +32,10 @@ FlowRouter.route('/sessions/:sessionId', {
         BlazeLayout.render('masterLayout', {content: 'summary'});
     }
 });
+
+FlowRouter.route('/logout',{
+  name: 'Logout',
+  action: function(){
+    Meteor.logout();
+  }
+})

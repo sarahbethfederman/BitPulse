@@ -11,6 +11,9 @@ User = Astro.Class({
       type: 'object',
       default: function(){return {};}
     },
-    'profile.name':'string'
+    'profile.name':'string',
+    'profile.fullNaame': 'string',
+    'profile.displayName': 'string',
+    
   }
 });
