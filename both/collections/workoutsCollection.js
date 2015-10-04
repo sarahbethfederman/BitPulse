@@ -13,7 +13,8 @@ Workout = Astro.Class({
       },
       'exercises.$._id': 'string',
       'exercises.$.name': 'string',
-      'excercises.$.duration': 'number',
+      'exercises.$.duration': 'number',
+      'exercises.$.description': 'string',
       'exercises.$.order': 'number'
         //'exercises.$.reps': 'number'
     }

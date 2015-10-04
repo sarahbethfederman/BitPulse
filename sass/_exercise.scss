@@ -1,0 +1,21 @@
+.exercises {
+  list-style-type: none;
+  padding: 0;
+}
+.exercise {
+  width: 100%;
+  padding: rem(13) rem(15);
+  background-color: #FFF;
+  border: 1px solid $light-grey;
+  @include clearfix();
+  &__name {
+    float: left;
+    margin: 0;
+  }
+  &__duration {
+    float: right;
+  }
+  &__description {
+
+  }
+}

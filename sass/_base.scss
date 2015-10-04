@@ -1,5 +1,5 @@
 body {
-  background-color: #FFF;
+  background-color: $light-grey;
   height: 100%;
   font-family: "brandon-grotesque";
   color: $dark-grey;
@@ -8,8 +8,8 @@ body {
 
 .container {
   @include outer-container();
-  border-top: rem(6) solid $green;
-  background-color: #FFF;
+  border-top: rem(6) solid $red;
+  background-color: $light-grey;
   padding: rem(50) rem(20);
   min-height: 100%;
   &:empty {
@@ -34,6 +34,6 @@ a {
   color: lighten($dark-grey, 15);
   transition: all .2s linear;
   &:hover {
-    color: $green;
+    color: $red;
   }
 }

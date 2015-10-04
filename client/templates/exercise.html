@@ -1,9 +1,15 @@
 <template name="exercise">
   {{#with workout}}
   <h1>{{name}}</h1>
+  <p>{{duration}}</p>
+    <ul class="exercises">
     {{#each exercises this}}
-      <div>{{this.name}}</div>
-      <div>{{this.duration}}</div>
+      <li class="exercise">
+        <h3 class="exercise__name">{{this.name}}</h3>
+        <span class="exercise__duration">{{this.duration}}s</span>
+        <p class="exercise__description">{{this.description}}</p>
+      </li>
     {{/each}}
+    </ul>
   {{/with}}
 </template>
