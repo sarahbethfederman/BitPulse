@@ -1,6 +1,6 @@
 FlowRouter.route('/', {
     name: 'Workouts',
-    action: function (){
+    action: function () {
         BlazeLayout.render("masterLayout", {content: "workouts"});
     }
 });
@@ -12,16 +12,16 @@ FlowRouter.route('/workouts/:workoutId',{
     }
 });
 
-FlowRouter.route('/sessions/:sessionId', {
-    name: 'SingleSession',
-    action: function (){
-        BlazeLayout.render('masterLayout', {content: 'session'});
-    }
-});
-
-FlowRouter.route('/workouts', {
+FlowRouter.route('/sessions', {
     name: 'Sessions',
     action: function(){
         BlazeLayout.render('masterLayout', 'sessions');
+    }
+});
+
+FlowRouter.route('/sessions/:sessionId', {
+    name: 'SingleSession',
+    action: function () {
+        BlazeLayout.render('masterLayout', {content: 'session'});
     }
 });

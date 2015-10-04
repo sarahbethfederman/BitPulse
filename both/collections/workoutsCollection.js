@@ -12,12 +12,11 @@ Workout = Astro.Class({
                 return [];
             },
             'exercises.$.name': 'string',
-            'excercises.$.duration': 'number',
-            'exercises.$.reps': 'number'
+            'excercises.$.duration': 'number'
+            //'exercises.$.reps': 'number'
         }
     },
     events: {
-
     },
     methods: {
         thisUser: function(){
