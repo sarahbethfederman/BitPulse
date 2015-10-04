@@ -40,19 +40,24 @@ Template.exercise.events({
       var currentExercises = _.sortBy(workout.exercises, 'order');
       Session.set('timeSpent', 0);
       var i = 0;
+
       function play() {
-        if (Session.get('timeSpent')) {
-          var progress = Math.round(Session.get('timeSpent') * 100 / currentExercises[i].duration);
-          $('progress#' + currentExercises[i]._id).val(progress);
-        }
-        console.log(progress, currentExercises[i].duration, Session.get('timeSpent'));
-        if (currentExercises[i].duration > Session.get('timeSpent')) {
-          Session.set('timeSpent', Session.get('timeSpent') + 1);
-          setTimeout(play, 1000);
+        if (currentExercises[i]) {
+          if (Session.get('timeSpent')) {
+            var progress = Math.round(Session.get('timeSpent') * 100 / currentExercises[i].duration);
+            $('progress#' + currentExercises[i]._id).val(progress);
+          }
+          // console.log(progress, currentExercises[i].duration, Session.get('timeSpent'));
+          if (currentExercises[i].duration > Session.get('timeSpent')) {
+            Session.set('timeSpent', Session.get('timeSpent') + 1);
+            setTimeout(play, 1000);
+          } else {
+            i = i + 1;
+            Session.set('timeSpent', 0);
+            setTimeout(play, 1000, i);
+          }
         } else {
-          i = i + 1;
-          Session.set('timeSpent', 0);
-          setTimeout(play, 1000, i);
+          alert("Workout complete! Way to go!");
         }
       }
       play();

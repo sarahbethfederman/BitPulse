@@ -18,7 +18,6 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 jagi:astronomy
 accounts-ui
-accounts-password
 d3js:d3
 kadira:flow-router
 selaias:accounts-fitbit
@@ -31,3 +30,4 @@ digilord:faker
 wolves:bourbon
 wolves:neat
 stevezhu:lodash
+useraccounts:unstyled
