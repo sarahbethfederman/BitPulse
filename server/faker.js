@@ -1,4 +1,4 @@
-Meteor.startup(function(){
+// Meteor.startup(function(){
   // console.log(Meteor.users.find().count());
   // if(Meteor.users.find().count() < 1) {
   //     var randomName = faker.name.firstName();
