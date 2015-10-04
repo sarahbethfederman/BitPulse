@@ -1,10 +1,15 @@
 <template name="exercise">
   {{#with workout}}
   <h1>{{name}}</h1>
-  <p>{{duration}}</p>
+  <div class="workout-meta-container">
+    <p class="workout-meta">Total duration: <strong>{{duration}}s</strong></p>
+    <p class="workout-meta">Current exercise: <strong>{{currentName}}</strong></p>
+  </div>
+  <a class="play-exercise fab" href="#"><svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="-78 -26 100 125"><path d="M-64-12v72L8 24"/></svg></a>
     <ul class="exercises">
     {{#each exercises this}}
-      <li class="exercise">
+      <li class="exercise {{current _id}}">
+        <progress class="exercise__progress" max="100"></progress>
         <h3 class="exercise__name">{{this.name}}</h3>
         <span class="exercise__duration">{{this.duration}}s</span>
         <p class="exercise__description">{{this.description}}</p>

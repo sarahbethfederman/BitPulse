@@ -1,12 +1,17 @@
 .exercises {
   list-style-type: none;
   padding: 0;
+  margin-top: rem(10);
 }
 .exercise {
   width: 100%;
+  margin-bottom: rem(10);
   padding: rem(13) rem(15);
+  padding-top: rem(9);
+  padding-bottom: rem(13);
   background-color: #FFF;
   border: 1px solid $light-grey;
+  position: relative;
   @include clearfix();
   &__name {
     float: left;
@@ -18,4 +23,44 @@
   &__description {
 
   }
+  &__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: rem(5);
+    -webkit-appearance: none;
+    &::-webkit-progress-bar {
+      background-color: darken($light-grey,5);
+    }
+    &::-webkit-progress-value {
+      background-color: $red;
+    }
+  }
+  &.current {
+    .exercise__name {
+      color: $red;
+    }
+  }
+}
+
+.play-exercise {
+  .play {
+    fill: #FFF;
+    padding-top: rem(5);
+    padding-left: rem(2);
+  }
+}
+
+.workout-meta {
+  @include span-columns(3);
+  @include clearfix();
+  margin: rem(5) 0;
+  &:first-child {
+    @include span-columns(2);
+  }
+}
+
+.workout-meta-container {
+  @include clearfix();
 }

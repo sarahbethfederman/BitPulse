@@ -41,8 +41,16 @@ Template.exercise.helpers({
   },
   exercises: function(workout) {
     var exercises = _.sortBy(workout.exercises, 'order');
-    return exercises;
     Session.set('currentExercise', exercises[0]);
+    return exercises;
+  },
+  current: function(id) {
+    if (id === Session.get('currentExercise')._id) {
+      return 'current';
+    }
+  },
+  currentName: function() {
+    return Session.get('currentExercise').name;
   }
 });
 
