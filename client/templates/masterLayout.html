@@ -15,10 +15,15 @@
 
 <template name="masterLayout">
   <div class="container">
-    {{#if currentUser}} {{> mainMenu }}
-    {{>Template.dynamic template=content}}
+    {{#if currentUser}}
+      {{> mainMenu }}
+      {{> Template.dynamic template=content}}
     {{else}}
-    {{> atForm}}
+      {{> thelogin}}
     {{/if}}
   </div>
+</template>
+
+<template name="thelogin">
+  {{> atForm}}
 </template>

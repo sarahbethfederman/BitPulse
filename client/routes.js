@@ -1,3 +1,19 @@
+// loggedIn = FlowRouter.group({
+//   triggersEnter: [
+//     function() {
+//       var route;
+//       if (!(Meteor.loggingIn() || Meteor.userId())) {
+//         route = FlowRouter.current();
+//         if (route.route.name !== 'login') {
+//           Session.set('redirectAfterLogin', route.path);
+//         }
+//         return FlowRouter.go(‘login’);
+//       }
+//     }
+//   ]
+// });
+// })
+
 FlowRouter.route('/', {
     name: 'Workouts',
     action: function () {
