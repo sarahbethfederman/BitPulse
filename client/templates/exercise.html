@@ -9,7 +9,7 @@
     <ul class="exercises">
     {{#each exercises this}}
       <li class="exercise {{current _id}}">
-        <progress class="exercise__progress" max="100"></progress>
+        <progress id="{{_id}}" class="exercise__progress" max="100"></progress>
         <h3 class="exercise__name">{{this.name}}</h3>
         <span class="exercise__duration">{{this.duration}}s</span>
         <p class="exercise__description">{{this.description}}</p>

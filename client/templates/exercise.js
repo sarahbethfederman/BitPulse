@@ -4,19 +4,22 @@ Template.exercise.onRendered(function() {
   Session.setDefault('play', false);
   Session.setDefault('timeSpent', 0);
   //remove this
-  Session.setDefault('currentExercise', Workouts.findOne().exercises[0]);
+  // Session.setDefault('currentExercise', Workouts.findOne().exercises[0]);
   Tracker.autorun(function() {
     var workout = Workouts.findOne({
       _id: FlowRouter.getParam('workoutId')
     });
     var data = [];
     function play() {
+      Session.setDefault('currentExercise', Workouts.findOne().exercises[0]);
       Tracker.nonreactive(function() {
         var duration = workout.exercises[0].duration; //Session.get('currentExercise').duration;
         var progress = Math.round(Session.get('timeSpent') * 100 / duration);
         console.log('playing for ', Session.get('timeSpent'), 'seconds.', progress + '%');
+        console.log(duration);
         if (duration < Session.get('timeSpent')) {
-          // console.log("hurray! it's over");
+          console.log("hurray! it's over");
+          Meteor.call('reorderExercises', workout, workout.exercises[1]);
           // data[] = {
           //   ex_id: workout.exercises[0]._id,
           //   data: [{
@@ -29,10 +32,10 @@ Template.exercise.onRendered(function() {
           var session = Sess.findOne({
             _id: FlowRouter.getParam('sessionId')
           });
-          session.push('data', data);
         }
         Session.set('timeSpent', Session.get('timeSpent') + 1);
-        $('progress').val(progress);
+        $('#' + workout.exercises[0]._id + 'progress').val(progress);
+        console.log('#' + workout.exercises[0]._id + ' progress');
       });
       // console.log('second?');
       if (Session.get('play')) {
@@ -83,7 +86,7 @@ Template.exercise.events({
     });
     Meteor.call('saveDoc', workout);
   },
-  'click .playPauseWorkout': function(e, t) {
+  'click .play-exercise': function(e, t) {
     if (Session.get('play')) {
       Session.set('play', false);
     } else {
