@@ -1,0 +1,36 @@
+.list-table {
+  @include span-columns(6);
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid $light-grey;
+  &__row {
+    width: 100%;
+    height: rem(50);
+    border-bottom: 1px solid $light-grey;
+    padding: rem(13) rem(15);
+    &__label {
+      @include span-columns(3);
+      font-weight: bold
+    }
+    &__info {
+      @include span-columns(1.5);
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__header {
+    @extend .list-table__row;
+    height: rem(35);
+    padding: rem(5) rem(15);
+    &__label {
+      font-weight: normal;
+      size: rem(12);
+      text-overflow: ellipsis;
+      @include span-columns(1.5);
+      &:first-child {
+        @include span-columns(3);
+      }
+    }
+  }
+}

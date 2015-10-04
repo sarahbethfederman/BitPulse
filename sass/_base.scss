@@ -1,0 +1,28 @@
+body {
+  background-color: $light-grey;
+  height: 100%;
+  font-family: "brandon-grotesque";
+  color: $dark-grey;
+}
+
+.container {
+  @include outer-container();
+  border-top: rem(6) solid $green;
+  background-color: #FFF;
+  padding: rem(50) rem(20);
+  &:empty {
+    display: none;
+  }
+}
+
+h1 {
+  margin: rem(5) 0;
+  font-size: rem(22);
+  text-transform: uppercase;
+}
+
+progress {
+  height: rem(20);
+  margin: 0;
+  padding: 0;
+}

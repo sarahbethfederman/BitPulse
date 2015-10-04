@@ -1,0 +1,23 @@
+.menu-bar {
+  position: fixed;
+  height: rem(40);
+  background-color: $green;
+  width: 100%;
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: rem(5);
+  display: block;
+  width: 50px;
+}
+
+.menu-link {
+  float: right;
+  color: #FFF;
+  text-decoration: none;
+  position: absolute;
+  top: rem(8);
+  right: rem(10);
+}

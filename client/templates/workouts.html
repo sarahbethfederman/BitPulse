@@ -1,3 +1,22 @@
 <template name="workouts">
-  
+  <h1>My Workouts</h1>
+  <ul class="list-table">
+    <li class="list-table__header">
+      <span class="list-table__header__label">Name</span>
+      <span class="list-table__header__label">Duration</span>
+      <span class="list-table__header__label">Exercises</span>
+    </li>
+    <!-- {{#each workouts}} -->
+    <li class="list-table__row">
+      <span class="list-table__row__label">Full Cardio Workout</span>
+      <span class="list-table__row__info">15m</span>
+      <span class="list-table__row__info">5</span>
+    </li>
+    <li class="list-table__row">
+      <span class="list-table__row__label">Glutes &amp; Thighs</span>
+      <span class="list-table__row__info">6m</span>
+      <span class="list-table__row__info">5</span>
+    </li>
+    <!-- {{/each}} -->
+  </ul>
 </template>

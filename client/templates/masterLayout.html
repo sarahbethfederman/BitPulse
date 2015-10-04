@@ -1,14 +1,15 @@
 <head>
-  <title>bp2</title>
+  <title>BitPulse</title>
+  <script src="https://use.typekit.net/yac3udt.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
-  <div class="container">
-    {{> masterLayout }}
-  </div>
 </body>
 
-
 <template name="masterLayout">
-  {{>Template.dynamic template=content}}
+  {{> mainMenu }}
+  <div class="container">
+    {{>Template.dynamic template=content}}
+  </div>
 </template>
