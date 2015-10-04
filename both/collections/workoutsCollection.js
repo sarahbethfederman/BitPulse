@@ -11,6 +11,7 @@ Workout = Astro.Class({
       default: function() {
         return [];
       },
+      'exercises.$._id': 'string',
       'exercises.$.name': 'string',
       'excercises.$.duration': 'number',
       'exercises.$.order': 'number'
