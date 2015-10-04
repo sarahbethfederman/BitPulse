@@ -17,13 +17,13 @@ Template.exercise.onRendered(function() {
         console.log('playing for ', Session.get('timeSpent'), 'seconds.', progress + '%');
         if (duration < Session.get('timeSpent')) {
           // console.log("hurray! it's over");
-          data[] = {
-            ex_id: workout.exercises[0]._id,
-            data: [{
-              hr: 13,
-              timeStamp: new Date();
-            }]
-          }
+          // data[] = {
+          //   ex_id: workout.exercises[0]._id,
+          //   data: [{
+          //     hr: 13,
+          //     timeStamp: new Date();
+          //   }]
+          // }
 
         } else {
           var session = Sess.findOne({
