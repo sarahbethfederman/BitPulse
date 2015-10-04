@@ -1,3 +1,20 @@
 .summary {
   @extend .exercise;
+  background-color: transparent;
+  list-style-type: none;
+  padding: 0;
+  &__exercise {
+    margin-bottom: rem(10);
+    background-color: #FFF;
+    padding: rem(15);
+    @include clearfix();
+  }
+  p {
+    margin: rem(5) 0;
+    float: left;
+    margin-right: rem(15);
+  }
+  &__name {
+    margin-top: 0;
+  }
 }
