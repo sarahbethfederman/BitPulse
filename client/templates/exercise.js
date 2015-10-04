@@ -31,14 +31,18 @@ Template.exercise.events({
     } else {
       Session.set('play', true);
     }
+
+    // (function play() {
+    //   console.log('iterated');
+    //   setTimeout(play, 1000);
+    // })();
+
     var workout = Workouts.findOne({
       _id: FlowRouter.getParam('workoutId')
     });
     var data = [];
     if (workout) {
-      var currentExercise = _.where(workout.exercises, {
-        order: 0
-      })[0];
+      var currentExercise = _.sortBy(workout.exercises, 'order')[0];
       function play() {
         // Session.setDefault('currentExercise', Workouts.findOne().exercises[0]);
         var duration = currentExercise.duration;
@@ -53,9 +57,7 @@ Template.exercise.events({
             order: 1
           }));
           Session.set('timeSpent', 0);
-          currentExercise = _.where(workout.exercises, {
-            order: 0
-          })[0];
+          currentExercise = _.sortBy(workout.exercises, 'order')[0];
         } else {
           var session = Sess.findOne({
             _id: FlowRouter.getParam('sessionId')
