@@ -8,7 +8,7 @@ Template.mainMenu.helpers({
       }
     } else {
       return {
-        'url': 'derp',
+        'url': '/logout',
         'text': 'Logout'
       }
     }
