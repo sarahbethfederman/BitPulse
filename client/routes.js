@@ -5,6 +5,13 @@ FlowRouter.route('/', {
     }
 });
 
+FlowRouter.route('/workouts/create',{
+    name: 'CreateWorkout',
+    action: function(){
+        BlazeLayout.render('masterLayout', {content: 'createWorkout'});
+    }
+});
+
 FlowRouter.route('/workouts/:workoutId/:sessionId?',{
     name: 'Exercises',
     action: function(){

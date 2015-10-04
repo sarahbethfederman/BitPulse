@@ -1,9 +1,16 @@
 Template.mainMenu.helpers({
   rightLink: function() {
     var url = FlowRouter.getRouteName();
-    return {
-      'url': 'derp',
-      'text': 'Logout'
+    if (url === 'CreateWorkout') {
+      return {
+        'url': FlowRouter.path('Workouts'),
+        'text': 'Save'
+      }
+    } else {
+      return {
+        'url': 'derp',
+        'text': 'Logout'
+      }
     }
   },
   leftLink: function() {

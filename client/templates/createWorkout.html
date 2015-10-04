@@ -1,0 +1,23 @@
+<template name="createWorkout">
+  <h1>Create a Workout</h1>
+  <input id="workout-name" type="text" placeholder="New Workout Name">
+  <ul class="exercises">
+    {{#each exercises}}
+    <li class="exercise">
+      <h3 class="exercise__name"><a class="delete-exercise">X </a>&nbsp;Exercise Name</h3>
+      <span class="exercise__duration">300s</span>
+      <p class="exercise__description">Exercise Description</p>
+    </li>
+{{/each}}
+    <li class="exercise-form">
+      <hr>
+      <form>
+        <input name="name" type="text" placeholder="Exercise Name">
+        <input name="duration" type="number" placeholder="Duration (seconds)">
+        <textarea name="description" placeholder="Exercise Description"></textarea>
+        <input type='submit' value="Add" id="submit-exercise">
+        <button id="cancel-exercise">Cancel</button>
+      </form>
+    </li>
+  </ul>
+</template>
