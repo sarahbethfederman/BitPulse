@@ -57,10 +57,7 @@
 .workout-meta {
   @include span-columns(3);
   @include clearfix();
-  margin: rem(5) 0;
-  &:first-child {
-    @include span-columns(2);
-  }
+  text-overflow: ellipsis;
 }
 
 .workout-meta-container {

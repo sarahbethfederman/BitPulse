@@ -38,7 +38,9 @@ Template.createWorkout.events({
         return exercise.order;
       }).order + 1
     });
+    console.log(workout);
     Meteor.call('saveDocs', workout);
+    Session.set('currentWorkout', workout);
     console.log('done?');
   }
 })

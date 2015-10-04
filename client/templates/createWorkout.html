@@ -4,11 +4,11 @@
   <ul class="exercises">
     {{#each exercises}}
     <li class="exercise">
-      <h3 class="exercise__name"><a class="delete-exercise">X </a>&nbsp;Exercise Name</h3>
-      <span class="exercise__duration">300s</span>
-      <p class="exercise__description">Exercise Description</p>
+      <h3 class="exercise__name"><a class="delete-exercise">X </a>&nbsp;{{name}}</h3>
+      <span class="exercise__duration">{{duration}}</span>
+      <p class="exercise__description">{{description}}</p>
     </li>
-{{/each}}
+    {{/each}}
     <li class="exercise-form">
       <hr>
       <form>
