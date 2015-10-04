@@ -3,6 +3,9 @@
   height: rem(40);
   background-color: $green;
   width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -14,10 +17,23 @@
 }
 
 .menu-link {
-  float: right;
   color: #FFF;
   text-decoration: none;
   position: absolute;
   top: rem(8);
-  right: rem(10);
+  width: 20%;
+  right: rem(20);
+  &:hover {
+    color: $dark-grey;
+  }
+}
+
+.menu-left {
+  @extend .menu-link;
+  left: rem(20);
+}
+
+.menu-right {
+  @extend .menu-link;
+  text-align: right;
 }

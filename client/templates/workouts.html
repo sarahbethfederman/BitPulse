@@ -4,19 +4,15 @@
     <li class="list-table__header">
       <span class="list-table__header__label">Name</span>
       <span class="list-table__header__label">Duration</span>
-      <span class="list-table__header__label">Exercises</span>
+      <span class="list-table__header__label">Start?</span>
     </li>
-    <!-- {{#each workouts}} -->
+    {{#each workouts}}
     <li class="list-table__row">
-      <span class="list-table__row__label">Full Cardio Workout</span>
-      <span class="list-table__row__info">15m</span>
-      <span class="list-table__row__info">5</span>
+      <a class="list-table__row__label" href="{{pathFor '/workouts/:id' id=_id}}">{{name}}</a>
+      <span class="list-table__row__info">{{duration}}s</span>
+      <a class="list-table__row__icon" href="#"><svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="-78 -26 100 125"><path d="M-64-12v72L8 24"/></svg></a>
     </li>
-    <li class="list-table__row">
-      <span class="list-table__row__label">Glutes &amp; Thighs</span>
-      <span class="list-table__row__info">6m</span>
-      <span class="list-table__row__info">5</span>
-    </li>
-    <!-- {{/each}} -->
+    {{/each}}
   </ul>
+  <a class="fab">+</a>
 </template>

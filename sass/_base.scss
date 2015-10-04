@@ -1,8 +1,9 @@
 body {
-  background-color: $light-grey;
+  background-color: #FFF;
   height: 100%;
   font-family: "brandon-grotesque";
   color: $dark-grey;
+  box-sizing: border-box;
 }
 
 .container {
@@ -10,6 +11,7 @@ body {
   border-top: rem(6) solid $green;
   background-color: #FFF;
   padding: rem(50) rem(20);
+  min-height: 100%;
   &:empty {
     display: none;
   }
@@ -25,4 +27,13 @@ progress {
   height: rem(20);
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: lighten($dark-grey, 15);
+  transition: all .2s linear;
+  &:hover {
+    color: $green;
+  }
 }

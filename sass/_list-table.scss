@@ -2,7 +2,11 @@
   @include span-columns(6);
   list-style-type: none;
   padding: 0;
+  margin-top: rem(10);
   border: 1px solid $light-grey;
+  &__icon {
+    @include span-columns(1.5);
+  }
   &__row {
     width: 100%;
     height: rem(50);
@@ -13,7 +17,10 @@
       font-weight: bold
     }
     &__info {
-      @include span-columns(1.5);
+      @include span-columns(2);
+      &:last-child {
+        @include span-columns(1);
+      }
     }
     &:last-child {
       border-bottom: none;
@@ -22,15 +29,56 @@
   &__header {
     @extend .list-table__row;
     height: rem(35);
-    padding: rem(5) rem(15);
+    padding: rem(7) rem(15);
     &__label {
       font-weight: normal;
-      size: rem(12);
+      font-size: rem(14);
       text-overflow: ellipsis;
-      @include span-columns(1.5);
+      @include span-columns(2);
       &:first-child {
         @include span-columns(3);
       }
+      &:last-child {
+        @include span-columns(1);
+      }
     }
   }
+  &.sessions {
+    .list-table__row {
+      &__info {
+        @include span-columns(1.5);
+      }
+    }
+    .list-table__header {
+      &__label {
+        @include span-columns(1.5);
+        &:first-child {
+          @include span-columns(3);
+        }
+        &:last-child {
+          @include span-columns(1.5);
+        }
+      }
+    }
+  }
+}
+
+.play {
+  fill: lighten($dark-grey, 15);
+  width: rem(20);
+  transition: fill .2s linear;
+  &:hover {
+    fill: $green;
+  }
+}
+
+.heart {
+  @extend .play;
+  height: rem(22);
+  padding-top: rem(3);
+  position:relative;
+  left: -5px;
+  fill: transparent;
+  stroke: $dark-grey;
+  stroke-width: 3;
 }
