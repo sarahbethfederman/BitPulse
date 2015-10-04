@@ -4,5 +4,8 @@ Template.summary.helpers({
     return Sess.findOne({
       _id: sessId
     });
+  },
+  exercises: function(session) {
+    return session.exercises;
   }
 });

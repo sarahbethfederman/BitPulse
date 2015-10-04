@@ -5,9 +5,9 @@
   <ul class="summary">
     {{#each exercises this}}
     <li class="summary__exercise">
-      <h2 class="summary__name">{{this.name}}</h2>
-      <p class="summary__duration">{{this.duration}}</p>
-      <img class="summary__chart" src="#">
+      <h2 class="summary__name">{{../exerciseName ex_id}}</h2>
+      <p class="summary__duration">{{../exerciseDuration ex_id}}</p>
+      <p class="summary__duration">{{../exerciseHeartrate ex_id}}</p>
     </li>
     {{/each}}
   </ul>

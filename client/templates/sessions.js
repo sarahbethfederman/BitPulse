@@ -1,6 +1,12 @@
 Template.sessions.helpers({
-    sessions: function(){
-        Sessions.find({});
+    session: function(){
+      return Sess.find({});
+    },
+    workout: function(){
+      var workoutId = FlowRouter.getParam('workoutId');
+      Workouts.findOne({
+        _id: workoutId
+      })
     }
 });
 
