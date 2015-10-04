@@ -1,6 +1,6 @@
+//where do I set the session context for this?
+
 Template.exercise.onRendered(function() {
-
-
   Session.setDefault('play', false);
   Session.setDefault('timeSpent', 0);
   //remove this
@@ -14,7 +14,7 @@ Template.exercise.onRendered(function() {
         console.log('playing for ', Session.get('timeSpent'), 'seconds.', progress + '%');
         if (duration < Session.get('timeSpent')) {
           // console.log("hurray! it's over");
-          
+
         } else {
 
         }

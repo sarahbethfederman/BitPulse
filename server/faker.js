@@ -36,4 +36,32 @@ Meteor.startup(function(){
       workout.save();
     });
   }
+
+  if(Sess.find().count() < 5) {
+    var workout = Workouts.findOne();
+    _.each(_.range(5), function() {
+      var exercises = [];
+      workout.exercises.forEach(function(exercise, i){
+        var data = [];
+        var fakeDate = new Date(faker.date.past());
+        _.each(_.range(5), function(j){
+          fakeDate = new Date(fakeDate.setSeconds(fakeDate.getSeconds() + j));
+          data[j] = {
+            hr: faker.random.number({'min': 40, 'max': 200}),
+            timeStamp: new Date(fakeDate)
+          }
+        });
+        exercises[i] = {
+          ex_id: exercise._id,
+          data: data
+        }
+      });
+      // console.log(exercises);
+      var session = new Sess({
+        workout: workout._id,
+        exercises: exercises
+      });
+      session.save();
+    });
+  }
 });
