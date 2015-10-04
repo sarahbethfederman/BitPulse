@@ -1,8 +1,8 @@
-Sessions = new Mongo.Collection('sessions');
+Sess = new Mongo.Collection('sessions');
 
-Session = Astro.Class({
-    name: 'Sessions',
-    collection: Sessions,
+Sess = Astro.Class({
+    name: 'Sess',
+    collection: Sess,
     fields: {
         workout: 'string',
         exercises: {
